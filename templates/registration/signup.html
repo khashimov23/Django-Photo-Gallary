@@ -1,0 +1,13 @@
+{% block title %}Sign Up{% endblock %}
+
+{% load static %} 
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> 
+<div class="jumbotron">
+    
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
